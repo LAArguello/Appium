@@ -1,4 +1,4 @@
-package org.appiumFramework;
+package config;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
