@@ -1,7 +1,7 @@
 package org.appiumFramework.pages;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import config.Appiumconfig;
+import org.appiumFramework.config.Appiumconfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import static org.appiumFramework.locators.calculadoraLocators.locators.*;
