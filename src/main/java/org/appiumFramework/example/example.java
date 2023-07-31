@@ -13,7 +13,7 @@ public class example {
     static AppiumDriver<MobileElement> driver_appium;
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
-        //aca llamamos la funcion que creamos mas abajo para hacer una prueba rapida sin necesidad de la estructura POM
+        //aca en el MAIN llamamos la funcion que creamos mas abajo para hacer una prueba rapida sin necesidad de la estructura POM
         openApp();
     }
 
@@ -24,14 +24,17 @@ public class example {
         URL url = Appiumconfig.getAppiumServerURL();
         if (url == null) {
             System.out.println("Error: Appium Server URL is not valid.");
+            //Si es null vamos a devolver un error por la consola
             return;
         }
         //aca ya inicializamos el driver que creamos pasandole las capabilities necesarias con el server de appium
         driver_appium = new AppiumDriver<>(url, capabilities);
+        //empiezo a definir los elementos con los que vamos a interactuar
         MobileElement numero2= driver_appium.findElement(By.xpath("//android.widget.ImageButton[@content-desc=\"2\"]"));
         MobileElement signomas= driver_appium.findElement(By.xpath("//android.widget.ImageButton[@content-desc=\"más\"]"));
         MobileElement signomenos= driver_appium.findElement(By.xpath("//android.widget.ImageButton[@content-desc=\"menos\"]"));
         MobileElement igual=driver_appium.findElement(By.xpath("//android.widget.ImageButton[@content-desc=\"igual a\"]"));
+        //empezamos a utilizar los elementos definidos
         numero2.click();
         signomas.click();
         numero2.click();
